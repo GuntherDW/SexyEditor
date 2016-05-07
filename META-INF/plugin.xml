@@ -1,0 +1,27 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<idea-plugin url="http://code.google.com/p/idea-sexyeditor/">
+	<name>Sexy Editor</name>
+	<description><![CDATA[
+		Make your IDEA editor background look <b>sexy</b>:) Use different images for different file sets, on various positions,
+		in random mode, or even in slideshow mode!
+		<br><br>
+		This plugin is totally useless, but, hey, you'll become a major geek in the office:)
+		Beware: usage of this plugin may produce some jealousy among your co-workers, and may attract some hot-looking-females: use it on your own risk! 
+	]]>
+	</description>
+	<version>1.2</version>
+	<vendor url="http://code.google.com/p/idea-sexyeditor/" logo="/net/intellij/plugins/sexyeditor/gfx/girl-small.png" email="igor.spasic@gmail.com" >Igor Spasic</vendor>
+	<idea-version since-build="7590"/>
+	<application-components>
+		<component>
+			<implementation-class>net.intellij.plugins.sexyeditor.SexyEditor</implementation-class>
+		</component>
+	</application-components>
+
+	<change-notes><![CDATA[
+	1.2   - Background image loading, for better performances. Explicit image destruction added.<br>
+	1.1   - Stupid bug fixed. Shine, shine, little plugin.<br>
+	1.0   - Initial Version
+	]]>
+	</change-notes>
+</idea-plugin>
