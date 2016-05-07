@@ -27,7 +27,7 @@ import java.util.Random;
  */
 @State(
 		name = SexyEditor.COMPONENT_NAME,
-		storages = {@Storage(id = "sexyeditor", file = "$APP_CONFIG$/sexyeditor.xml")})
+		storages = {@Storage("sexyeditor.xml")})
 public class SexyEditor implements ApplicationComponent, Configurable, PersistentStateComponent<SexyEditor.State> {
 
 	public static final String COMPONENT_NAME = "SexyEditor";
@@ -168,7 +168,7 @@ public class SexyEditor implements ApplicationComponent, Configurable, Persisten
 		public List<BackgroundConfiguration> allConfigs = new ArrayList<BackgroundConfiguration>();
 	}
 
-	private final State state = new State();
+	private static State state = new State();
 
 	/**
 	 * Returns plugin state.
@@ -181,6 +181,7 @@ public class SexyEditor implements ApplicationComponent, Configurable, Persisten
 	 * Loads state from configuration file.
 	 */
 	public void loadState(SexyEditor.State state) {
+		if(this.state == null) this.state = new State();
 		XmlSerializerUtil.copyBean(state, this.state);
 	}
 }

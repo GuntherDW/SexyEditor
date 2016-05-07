@@ -9,7 +9,7 @@
 		Beware: usage of this plugin may produce some jealousy among your co-workers, and may attract some hot-looking-females: use it on your own risk! 
 	]]>
 	</description>
-	<version>1.2</version>
+	<version>1.3</version>
 	<vendor url="http://code.google.com/p/idea-sexyeditor/" logo="/net/intellij/plugins/sexyeditor/gfx/girl-small.png" email="igor.spasic@gmail.com" >Igor Spasic</vendor>
 	<idea-version since-build="7590"/>
 	<application-components>
@@ -17,8 +17,12 @@
 			<implementation-class>net.intellij.plugins.sexyeditor.SexyEditor</implementation-class>
 		</component>
 	</application-components>
+	<extensions defaultExtensionNs="com.intellij">
+		<applicationConfigurable instance="net.intellij.plugins.sexyeditor.SexyEditor"/>
+    </extensions>
 
 	<change-notes><![CDATA[
+	1.3   - Updated for newer IntelliJ versions
 	1.2   - Background image loading, for better performances. Explicit image destruction added.<br>
 	1.1   - Stupid bug fixed. Shine, shine, little plugin.<br>
 	1.0   - Initial Version
